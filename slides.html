@@ -1432,7 +1432,81 @@
         <aside class="notes">Five choices. When nobody has bet yet: check or bet. When someone has already bet or you're facing a blind: fold, call, or raise. You CAN fold when nobody has bet, but you'd be giving up a free card.</aside>
       </section>
 
-      <!-- ===== SLIDE 17: ANATOMY OF A HAND (was #13, 6 players) ===== -->
+      <!-- ===== SLIDE 17: RAISE SIZING ===== -->
+      <section>
+        <div class="label">Betting Rules</div>
+        <h2>How much can you bet?</h2>
+        <p>This is <strong>No Limit</strong> Hold'em. There's no cap on bet size.</p>
+
+        <div style="max-width:700px; margin:16px auto;">
+          <div style="display:grid; grid-template-columns:auto 1fr; gap:8px 18px; font-size:0.72em; text-align:left;">
+            <span style="font-weight:700; color:var(--accent);">Minimum bet</span>
+            <span style="color:var(--text-dim);">Equal to the big blind. In a 1/2 game, min bet = <strong>2</strong>.</span>
+
+            <span style="font-weight:700; color:var(--accent);">Minimum raise</span>
+            <span style="color:var(--text-dim);">At least the size of the previous bet or raise on top.</span>
+
+            <span style="font-weight:700; color:var(--accent);">Maximum raise</span>
+            <span style="color:var(--text-dim);"><strong>All-in</strong> &mdash; push your entire stack. No limit means no cap.</span>
+          </div>
+        </div>
+
+        <div class="note accent-note" style="text-align:left; margin-top:18px; max-width:700px;">
+          <p style="margin:0 0 6px 0; font-weight:600; color:var(--text);">Example &mdash; 1/2 game:</p>
+          <div style="font-family:var(--mono); font-size:0.95em; line-height:2;">
+            <p style="margin:0;">Player A bets <strong class="accent">10</strong></p>
+            <p style="margin:0;" class="fragment">Player B min-raises to <strong class="accent">20</strong> <span style="color:var(--text-faint);">(raise of 10 on top)</span></p>
+            <p style="margin:0;" class="fragment">Player C min-raises to <strong class="accent">30</strong> <span style="color:var(--text-faint);">(raise of 10 on top)</span></p>
+            <p style="margin:0;" class="fragment">Player D could raise to <strong class="accent">anything &ge; 40</strong> &hellip;or shove <strong class="accent">all-in</strong></p>
+          </div>
+        </div>
+
+        <aside class="notes">No Limit means there's no cap on how much you can bet. The minimum bet is the big blind. When raising, you have to raise by at least the size of the previous bet or raise. So if someone bets 10, you can raise to 20 or more — the raise amount is at least 10. The maximum? Everything you have. That's all-in.</aside>
+      </section>
+
+      <!-- ===== SLIDE 18: BET NAMING ===== -->
+      <section>
+        <div class="label">Betting Rules</div>
+        <h2>Raise naming: the number system</h2>
+        <p>Bets and raises are numbered by how many aggressive actions have happened.</p>
+
+        <div style="max-width:720px; margin:16px auto;">
+          <div style="display:flex; align-items:center; justify-content:center; gap:0; flex-wrap:wrap; margin-bottom:18px;">
+            <div style="text-align:center; padding:8px 12px;">
+              <div class="badge" style="font-size:0.7em; padding:4px 10px; color:var(--text-faint);">BB posts 2</div>
+              <p style="font-size:0.52em; color:var(--text-faint); margin-top:4px;">1-bet</p>
+            </div>
+            <span style="color:var(--text-faint); font-size:0.8em;">&rarr;</span>
+            <div style="text-align:center; padding:8px 12px;" class="fragment">
+              <div class="badge raise" style="font-size:0.7em; padding:4px 10px;">You raise to 6</div>
+              <p style="font-size:0.52em; color:var(--accent); margin-top:4px; font-weight:600;">2-bet (open)</p>
+            </div>
+            <span style="color:var(--text-faint); font-size:0.8em;" class="fragment">&rarr;</span>
+            <div style="text-align:center; padding:8px 12px;" class="fragment">
+              <div class="badge raise" style="font-size:0.7em; padding:4px 10px;">Alice raises to 18</div>
+              <p style="font-size:0.52em; color:var(--accent); margin-top:4px; font-weight:600;">3-bet</p>
+            </div>
+            <span style="color:var(--text-faint); font-size:0.8em;" class="fragment">&rarr;</span>
+            <div style="text-align:center; padding:8px 12px;" class="fragment">
+              <div class="badge raise" style="font-size:0.7em; padding:4px 10px;">You re-raise to 50</div>
+              <p style="font-size:0.52em; color:var(--accent); margin-top:4px; font-weight:600;">4-bet</p>
+            </div>
+            <span style="color:var(--text-faint); font-size:0.8em;" class="fragment">&rarr;</span>
+            <div style="text-align:center; padding:8px 12px;" class="fragment">
+              <div class="badge raise" style="font-size:0.7em; padding:4px 10px;">Alice all-in</div>
+              <p style="font-size:0.52em; color:var(--accent); margin-top:4px; font-weight:600;">5-bet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="note" style="text-align:center; max-width:640px;">
+          <p style="margin:0;">You'll mostly hear <strong>"3-bet"</strong> in poker conversation. It just means someone raised a raise. Don't overthink the numbering &mdash; it just counts the bets.</p>
+        </div>
+
+        <aside class="notes">The numbering counts the aggressive actions. Preflop, the big blind counts as the first bet. The open raise is the 2-bet. A re-raise is the 3-bet. You'll hear 3-bet constantly in poker — it just means someone raised a raise. 4-bets and 5-bets are rare and usually mean someone is going all-in.</aside>
+      </section>
+
+      <!-- ===== ANATOMY OF A HAND ===== -->
       <section>
         <div class="label">Game Flow</div>
         <h2>Anatomy of a hand</h2>
@@ -1839,48 +1913,7 @@
         <aside class="notes">6 players start. By the river, it's heads-up between Dave and You. Dave shoves all-in. You fold. Dave wins without ever showing cards. Could have been a monster hand. Could have been a bluff. That's poker.</aside>
       </section>
 
-      <!-- HARDER PRACTICE 3: 5-of-7 Trap (Quads vs Full House) -->
-      <section>
-        <div class="label">Practice &mdash; Hard</div>
-        <h2>The 5-of-7 trap</h2>
-
-        <div class="board">
-          <span class="card"><span class="s-black"><span class="rank">A</span><span class="suit">♠</span></span></span>
-          <span class="card"><span class="s-black"><span class="rank">A</span><span class="suit">♣</span></span></span>
-          <span class="card"><span class="s-red"><span class="rank">K</span><span class="suit">♦</span></span></span>
-          <span class="card"><span class="s-black"><span class="rank">K</span><span class="suit">♣</span></span></span>
-          <span class="card"><span class="s-red"><span class="rank">Q</span><span class="suit">♥</span></span></span>
-        </div>
-
-        <div class="player-row">
-          <span class="player-name">Player A:</span>
-          <span class="card sm"><span class="s-red"><span class="rank">A</span><span class="suit">♥</span></span></span>
-          <span class="card sm"><span class="s-red"><span class="rank">2</span><span class="suit">♦</span></span></span>
-        </div>
-        <div class="player-row">
-          <span class="player-name">Player B:</span>
-          <span class="card sm"><span class="s-red"><span class="rank">K</span><span class="suit">♥</span></span></span>
-          <span class="card sm"><span class="s-black"><span class="rank">K</span><span class="suit">♠</span></span></span>
-        </div>
-
-        <p style="margin:12px 0; font-size:0.85em;">This one is hard. Take a minute.</p>
-
-        <div class="fragment">
-          <div class="player-row">
-            <span class="player-name">Player A:</span>
-            <span style="font-size:0.72em;">Full House, Aces full of Kings (A&#9824; A&#9827; A&#9829; K&#9830; K&#9827;)</span>
-          </div>
-          <div class="player-row">
-            <span class="player-name accent">Player B:</span>
-            <span style="font-size:0.72em;"><strong class="accent">Four Kings</strong> (K&#9830; K&#9827; K&#9829; K&#9824; A&#9824;)</span>
-          </div>
-          <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player B wins.</span> Four of a kind beats a full house.</p>
-          <p style="font-size:0.68em; color:var(--text-faint);">Player B has all four Kings: two from the board, two from their hand. Always count all 7.</p>
-        </div>
-        <aside class="notes">Player A has a full house, Aces full of Kings. Sounds amazing. But Player B has four Kings. Two from the board plus two from their hand. Four of a kind beats a full house. This is why you have to consider all 7 cards.</aside>
-      </section>
-
-      <!-- HARDER PRACTICE 4: Full House vs Flush -->
+      <!-- HARDER PRACTICE 3: Full House vs Flush -->
       <section>
         <div class="label">Practice &mdash; Hard</div>
         <h2>Who wins? #4</h2>
@@ -1957,31 +1990,7 @@
         <aside class="notes">Both have a pair of Kings. Same pair. So we look at the next highest card. Player A has a Queen, Player B has a Jack. Queen beats Jack. This is called a kicker. The kicker matters more than you'd think.</aside>
       </section>
 
-      <!-- ===== SLIDE 28: ODDS CONTEXT (was #22) ===== -->
-      <section>
-        <div class="label">Perspective</div>
-        <h2>What that 5-of-7 trap looked like in numbers</h2>
-        <div class="grid-2" style="margin-top:24px;">
-          <div style="text-align:center; padding:20px 16px; background:var(--bg-card); border-radius:6px; border:1px solid var(--border);">
-            <p class="big-num">2.6%</p>
-            <p style="margin-top:10px;">Probability of being dealt<br>a <strong>full house</strong> (best 5 of 7)</p>
-            <p style="font-size:0.65em; color:var(--text-faint);">Player A had this.</p>
-          </div>
-          <div style="text-align:center; padding:20px 16px; background:var(--bg-card); border-radius:6px; border:1px solid var(--border);">
-            <p class="big-num">0.17%</p>
-            <p style="margin-top:10px;">Probability of being dealt<br><strong>four of a kind</strong> (best 5 of 7)</p>
-            <p style="font-size:0.65em; color:var(--text-faint);">Player B had this. About 1 in 595 hands.</p>
-          </div>
-        </div>
-
-        <div class="note" style="text-align:center; margin-top:20px;">
-          <p style="margin:0;">A full house loses to four of a kind. It doesn't matter how unlikely your hand was.</p>
-          <p style="margin:4px 0 0 0;">It only matters where it ranks.</p>
-        </div>
-        <aside class="notes">A full house happens about 2.6% of the time. Four of a kind, 0.17%. Both are rare. But the ranking is absolute.</aside>
-      </section>
-
-      <!-- ===== SLIDE 29: RECAP ===== -->
+      <!-- ===== RECAP ===== -->
       <section>
         <div class="label">Recap</div>
         <h2>What you now know</h2>
