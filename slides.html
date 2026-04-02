@@ -320,6 +320,20 @@
     /* ── Dimmed seat (folded in prior street) ── */
     .seat.folded { opacity: 0.22; }
 
+    /* Force fragments inside table to start hidden (specificity fix) */
+    .reveal .fragment.bet-label,
+    .reveal .fragment.fold-x,
+    .reveal .fragment.pot-center {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .reveal .fragment.bet-label.visible,
+    .reveal .fragment.fold-x.visible,
+    .reveal .fragment.pot-center.visible {
+      opacity: 1;
+      visibility: inherit;
+    }
+
     /* ── Fold animation (slide 1) ── */
     @keyframes fold-toss {
       0%   { opacity: 1; transform: translateY(0) rotate(0deg); }
@@ -1464,32 +1478,31 @@
             <div class="table-chip tc-s1"><div class="chip d" style="width:22px;height:22px;font-size:0.5em;">D</div></div>
             <div class="table-chip tc-s2"><div class="chip sb" style="width:22px;height:22px;font-size:0.5em;">SB</div></div>
             <div class="table-chip tc-s3"><div class="chip bb" style="width:22px;height:22px;font-size:0.5em;">BB</div></div>
-            <!-- Bet labels -->
-            <span class="fragment bet-label bl-s4" data-fragment-index="2">6</span>
+            <!-- Bet labels (order: You=0, Dave=1, Eve=2, Alice=3, Bob=4, Carol=5) -->
+            <span class="fragment bet-label bl-s4" data-fragment-index="0">6</span>
+            <span class="fragment fold-x fx-s5" data-fragment-index="1">FOLD</span>
+            <span class="fragment fold-x fx-s6" data-fragment-index="2">FOLD</span>
             <span class="fragment bet-label bl-s1" data-fragment-index="3">6</span>
-            <span class="fragment bet-label bl-s3" data-fragment-index="5">6</span>
-            <!-- Fold badges -->
-            <span class="fragment fold-x fx-s5" data-fragment-index="0">FOLD</span>
-            <span class="fragment fold-x fx-s6" data-fragment-index="1">FOLD</span>
             <span class="fragment fold-x fx-s2" data-fragment-index="4">FOLD</span>
+            <span class="fragment bet-label bl-s3" data-fragment-index="5">6</span>
             <!-- Pot -->
             <span class="fragment pot-center" data-fragment-index="6">Pot: 19</span>
           </div>
 
           <div class="wt-actions">
             <div class="note accent-note" style="margin:0 0 8px 0; padding:5px 10px;">
-              <p style="margin:0; font-size:0.85em;"><strong>Preflop order:</strong> starts left of the Big Blind.</p>
+              <p style="margin:0; font-size:0.85em;"><strong>Preflop order:</strong> starts left of the Big Blind (that's you).</p>
             </div>
-            <p class="fragment" data-fragment-index="0"><strong>Dave</strong>: <span class="badge fold">Fold</span></p>
-            <p class="fragment" data-fragment-index="1"><strong>Eve</strong>: <span class="badge fold">Fold</span></p>
-            <p class="fragment" data-fragment-index="2"><strong class="accent">You</strong>: <span class="badge raise">Raise to 6</span></p>
+            <p class="fragment" data-fragment-index="0"><strong class="accent">You</strong>: <span class="badge raise">Raise to 6</span></p>
+            <p class="fragment" data-fragment-index="1"><strong>Dave</strong>: <span class="badge fold">Fold</span></p>
+            <p class="fragment" data-fragment-index="2"><strong>Eve</strong>: <span class="badge fold">Fold</span></p>
             <p class="fragment" data-fragment-index="3"><strong>Alice</strong>: <span class="badge call">Call 6</span></p>
             <p class="fragment" data-fragment-index="4"><strong>Bob</strong>: <span class="badge fold">Fold</span> <span style="color:var(--text-faint); font-size:0.85em;">(loses SB of 1)</span></p>
             <p class="fragment" data-fragment-index="5"><strong>Carol</strong>: <span class="badge call">Call 6</span> <span style="color:var(--text-faint); font-size:0.85em;">(adds 4 to her 2)</span></p>
             <div class="pot fragment" data-fragment-index="6">Pot: 19 chips</div>
           </div>
         </div>
-        <aside class="notes">Blinds go in. Preflop, action starts left of the big blind. Dave and Eve fold. You raise to 6 with Ace-King. Alice calls. Bob folds his small blind. Carol calls. Pot is 19. Three players to the flop.</aside>
+        <aside class="notes">Blinds go in. Preflop, action starts left of the big blind — that's you. You raise to 6 with Ace-King. Dave and Eve fold. Alice calls. Bob folds his small blind. Carol calls. Pot is 19. Three players to the flop.</aside>
       </section>
 
       <!-- ===== SLIDE 19: FLOP (was #15) ===== -->
