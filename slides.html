@@ -346,12 +346,18 @@
       z-index: 6;
       display: flex;
       gap: 1px;
-      transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .muck-from-s3 { bottom: 8%; right: 22px; }
-    .reveal .fragment.fade-out.muck-from-s3:not(.visible) {
+    /* When the fragment becomes visible, animate cards into the muck */
+    .reveal .fragment.muck-cards {
+      opacity: 1;
+      visibility: inherit;
+      transition: none;
+    }
+    .reveal .fragment.muck-cards.visible {
       opacity: 0;
       transform: translate(-80px, -50px) rotate(-12deg) scale(0.5);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     /* Force fragments inside table to start hidden (specificity fix) */
@@ -366,11 +372,6 @@
     .reveal .fragment.fold-x.visible,
     .reveal .fragment.check-x.visible,
     .reveal .fragment.pot-center.visible {
-      opacity: 1;
-      visibility: inherit;
-    }
-    /* Muck cards: fade-out starts visible, animates away */
-    .reveal .fragment.fade-out.muck-cards.visible {
       opacity: 1;
       visibility: inherit;
     }
@@ -1577,7 +1578,7 @@
               <span class="seat-name bright">Carol</span>
             </div>
             <!-- Carol's cards — slide to muck on fold -->
-            <div class="fragment fade-out muck-cards muck-from-s3" data-fragment-index="3">
+            <div class="fragment muck-cards muck-from-s3" data-fragment-index="3">
               <div class="card xxs facedown"></div><div class="card xxs facedown"></div>
             </div>
             <div class="seat s4">
