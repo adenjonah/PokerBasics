@@ -663,6 +663,50 @@
       pointer-events: none;
     }
 
+    /* ── Hand reference sidebar (practice slides) ── */
+    .hand-ref {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 10px;
+      font-size: 0.48em;
+      line-height: 1.7;
+      color: var(--text-faint);
+      text-align: left;
+      z-index: 10;
+    }
+    .hand-ref .hr-title {
+      font-size: 0.85em;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .hand-ref ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: hr;
+    }
+    .hand-ref li {
+      counter-increment: hr;
+      padding: 0;
+    }
+    .hand-ref li::before {
+      content: counter(hr) ". ";
+      color: var(--text-faint);
+      font-family: var(--mono);
+      font-size: 0.9em;
+    }
+    .hand-ref li.hr-common {
+      color: var(--accent);
+    }
+
     /* Reveal overrides */
     .reveal .slide-background { background: var(--bg); }
     .reveal .controls { color: var(--accent); }
@@ -1044,6 +1088,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player 2 wins.</span> Two pair beats one pair.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Player 1 has a pair of Kings. Player 2 has two pair, Jacks and 5s. Two pair always beats one pair, even though Kings are higher than Jacks.</aside>
       </section>
 
@@ -1082,6 +1127,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player 2 wins.</span> A straight beats three of a kind.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Player 1 has trip 9s. Player 2 has a straight, 6 through 10. Straight beats trips.</aside>
       </section>
 
@@ -1120,6 +1166,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player 1 wins.</span> A flush beats a pair.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Player 1 has 5 spades for a flush. Player 2 paired Queens but that's not enough. Flush crushes a pair.</aside>
       </section>
 
@@ -1159,6 +1206,7 @@
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Chop! (Split pot)</span></p>
           <p style="font-size:0.68em; color:var(--text-faint);">Both players' best 5 cards are identical. The pot is split evenly.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Same hand! Both make two pair, Aces and 9s, with a 7 kicker from the board. When both players' best 5 cards are identical, it's a chop. The pot is split evenly. Suits never break ties.</aside>
       </section>
 
@@ -1197,6 +1245,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player 1 wins.</span> Any pair beats any high card.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Player 2 has Ace-King but didn't pair either one. Player 1 paired a Jack. Any pair beats high card, even when your unpaired cards look impressive.</aside>
       </section>
 
@@ -1873,6 +1922,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player A wins.</span> Three of a kind beats two pair.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Player A has three 10s. Player B has two pair, 10s and 5s. Three of a kind beats two pair every time.</aside>
       </section>
 
@@ -1948,6 +1998,7 @@
           </div>
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player A wins.</span> Full house beats a flush, even an Ace-high one.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Tricky one. Player B has a beautiful Ace-high flush. But Player A has three 8s and two Jacks for a full house. Full house beats flush every time, no matter how high the flush is.</aside>
       </section>
 
@@ -1987,6 +2038,7 @@
           <p style="font-size:0.9em; font-weight:700; margin-top:8px;"><span class="accent">Player A wins.</span> Same pair, but Queen kicker beats Jack kicker.</p>
           <p style="font-size:0.68em; color:var(--text-faint);">When pairs are tied, the highest remaining card (the "kicker") breaks it.</p>
         </div>
+        <div class="hand-ref"><div class="hr-title">Rankings</div><ol><li>Royal Flush</li><li>Straight Flush</li><li>Four of a Kind</li><li>Full House</li><li>Flush</li><li class="hr-common">Straight</li><li class="hr-common">Three of a Kind</li><li class="hr-common">Two Pair</li><li class="hr-common">One Pair</li><li class="hr-common">High Card</li></ol></div>
         <aside class="notes">Both have a pair of Kings. Same pair. So we look at the next highest card. Player A has a Queen, Player B has a Jack. Queen beats Jack. This is called a kicker. The kicker matters more than you'd think.</aside>
       </section>
 
