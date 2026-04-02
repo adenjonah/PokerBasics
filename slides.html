@@ -320,15 +320,37 @@
     /* ── Dimmed seat (folded in prior street) ── */
     .seat.folded { opacity: 0.22; }
 
+    /* ── Check badge (on table) ── */
+    .check-x {
+      position: absolute;
+      z-index: 5;
+      font-size: 0.42em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      background: rgba(0,0,0,0.55);
+      padding: 1px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+    .cx-s1 { top: 14px; left: 50%; transform: translateX(-50%); }
+    .cx-s2 { top: 20%; right: 26px; }
+    .cx-s3 { bottom: 20%; right: 26px; }
+    .cx-s4 { bottom: 14px; left: 50%; transform: translateX(-50%); }
+    .cx-s5 { bottom: 20%; left: 26px; }
+    .cx-s6 { top: 20%; left: 26px; }
+
     /* Force fragments inside table to start hidden (specificity fix) */
     .reveal .fragment.bet-label,
     .reveal .fragment.fold-x,
+    .reveal .fragment.check-x,
     .reveal .fragment.pot-center {
       opacity: 0;
       visibility: hidden;
     }
     .reveal .fragment.bet-label.visible,
     .reveal .fragment.fold-x.visible,
+    .reveal .fragment.check-x.visible,
     .reveal .fragment.pot-center.visible {
       opacity: 1;
       visibility: inherit;
@@ -1545,7 +1567,8 @@
             </div>
             <div class="seat s5 folded"><div class="seat-dot">D</div><span class="seat-name">Dave</span></div>
             <div class="seat s6 folded"><div class="seat-dot">E</div><span class="seat-name">Eve</span></div>
-            <!-- Bets -->
+            <!-- Actions on table -->
+            <span class="fragment check-x cx-s3" data-fragment-index="0">CHECK</span>
             <span class="fragment bet-label bl-s4" data-fragment-index="1">10</span>
             <span class="fragment bet-label bl-s1" data-fragment-index="2">10</span>
             <span class="fragment fold-x fx-s3" data-fragment-index="3">FOLD</span>
